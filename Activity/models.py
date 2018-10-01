@@ -15,7 +15,7 @@ def get_default_user():
 @python_2_unicode_compatible
 class ActivityRecord(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
-    activityType = models.CharField(max_length=300)
+    activity_type = models.CharField(max_length=300)
     duration = models.IntegerField(default=0)
 
     def __str__(self):
