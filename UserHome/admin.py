@@ -2,4 +2,7 @@ from django.contrib import admin
 
 from .models import Activity
 
-admin.site.register(Activity)
+
+@admin.register(Activity)
+class ActivityAdmin(admin.ModelAdmin):
+    list_display = ('id', 'user', 'activityType', 'duration')

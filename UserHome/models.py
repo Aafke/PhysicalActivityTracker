@@ -14,7 +14,7 @@ def get_default_user():
 # todo: type you can choose from predefined list in dropdown menu
 @python_2_unicode_compatible
 class Activity(models.Model):
-    User = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     activityType = models.CharField(max_length=300)
     duration = models.IntegerField(default=0)
 
