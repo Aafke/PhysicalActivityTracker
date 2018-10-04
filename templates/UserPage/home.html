@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block title %}
+    Welcome {{user.name}}
+{% endblock %}
+
 {% block content %}
     <h1>Welcome {{user.name}}</h1>
     <p>These are your records:</p>
