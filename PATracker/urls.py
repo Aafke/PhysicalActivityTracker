@@ -21,5 +21,5 @@ from .views import welcome
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'UserPage/', include('UserPage.urls')),
-    path('welcome', welcome)
+    path('welcome', welcome, name="PATracker_welcome")
 ]
