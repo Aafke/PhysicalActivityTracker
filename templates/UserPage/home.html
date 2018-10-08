@@ -6,6 +6,11 @@
 
 {% block content %}
     <h1>Welcome {{user.name}}</h1>
+
+    <a href="{% url 'UserPage_new_activity_record' %}">
+        Add a new physical activity record
+    </a>
+
     <p>These are your records:</p>
     <p>Currently you have {{ nrecords }} activity records in the database</p>
 

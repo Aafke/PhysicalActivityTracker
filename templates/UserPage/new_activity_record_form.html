@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+New Invitation
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="{% url 'UserPage_new_activity_record' %}">
+        {{ form }}
+
+        {% csrf_token %}
+        <button type="submit">Submit the activity record</button>
+    </form>
+
+
+{% endblock %}
