@@ -15,9 +15,19 @@ class ActivityRecordQuerySet(models.QuerySet):
 # todo: type you can choose from predefined list in dropdown menu
 @python_2_unicode_compatible
 class ActivityRecord(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
-    activity_type = models.CharField(max_length=300)
-    duration = models.IntegerField(default=0)
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True)
+    activity_type = models.CharField(
+        max_length=300,
+        verbose_name="Type of Activity",
+        help_text="Please enter the type of activity")
+    duration = models.IntegerField(
+        default=0,
+        verbose_name="Duration of activity")
+    duration = models.IntegerField()
 
     objects = ActivityRecordQuerySet.as_manager()
 
